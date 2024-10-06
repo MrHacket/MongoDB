@@ -41,11 +41,11 @@ db.films.find({release_year:1993},{_id:false,title:true})
 db.films.find().pretty()
 
 B --  
-3 -- >  Give all English films released before year 2000.
+1 -- >  Give all English films released before year 2000.
 
 db.films.find({$and:[{release_year:{$lt:2000}},{language:"English"}]})
 
-4 -- >  Display title and release year of ‘Action’ films that starts with the letter ‘K’.
+ -- >  Display title and release year of ‘Action’ films that starts with the letter ‘K’.
 *************************************************
 db.films.find({title[0]:{"K"}},{title:true,release_year:true})
 
